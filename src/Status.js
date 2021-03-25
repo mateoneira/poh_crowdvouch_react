@@ -31,7 +31,7 @@ function Status({person}) {
             ? <div>&nbsp;&nbsp;&nbsp;&nbsp; # vouches: {person.n_vouches} </div>
             : person.status === "PendingRegistration"
                 ?<div>&nbsp;&nbsp;&nbsp;&nbsp;pending: {person.days_left}</div>
-                :<div>&nbsp;&nbsp;&nbsp;&nbsp;waiting for vouch</div>
+                :<div><div>&nbsp;&nbsp;&nbsp;&nbsp;waiting for vouch</div> <div>&nbsp;&nbsp;&nbsp;&nbsp;Approx wait: {person.days_left}</div></div>
         }
         {
             person.current_vouch 
