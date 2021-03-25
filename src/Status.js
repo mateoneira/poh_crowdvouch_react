@@ -3,14 +3,14 @@ import React from "react"
 function Status({person}) {
 
     const get_vouched = (person) => {
-        if (person.vouched_by.length === 0) {
+        if (person.vouched_by === 'null') {
             if (person.registered  || person.status === "PendingRegistration"){ return 'external'}
             else{
                 return ""
             }
         }
         else{
-            return person.vouched_by[0]
+            return person.vouched_by
         }
     }
 
